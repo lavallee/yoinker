@@ -4,6 +4,11 @@ All notable changes to Yoinker will be documented here. Versions follow semantic
 
 ## [Unreleased]
 
+### Changed
+
+- Reworked the public site around a source-linked example, direct GitHub and release routes,
+  copyable Codex and Claude Code installation, and usable mobile layouts.
+
 ## [0.1.0] - 2026-08-30
 
 ### Added

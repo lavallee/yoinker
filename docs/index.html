@@ -3,79 +3,255 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yoinker helps agents understand unfamiliar tools and ideas, determine what transfers, and decide what to borrow, try, track, or reject.">
+  <meta name="description" content="Yoinker is an evidence-first Agent Skill that explains unfamiliar tools and turns them into bounded borrow, try, track, or reject decisions.">
   <meta name="color-scheme" content="light">
-  <title>yoinker · understand it, yoink what transfers</title>
+  <meta property="og:title" content="Yoinker · Understand it. Yoink what transfers.">
+  <meta property="og:description" content="Give your agent a link or a question. Get an evidence-linked explanation and a bounded adoption decision.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lavallee.github.io/yoinker/">
+  <title>Yoinker · Understand it. Yoink what transfers.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="masthead">
-    <a class="wordmark" href="#top">yoinker</a>
-    <span class="version">v0.1.0</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead" id="top">
+    <a class="wordmark" href="#top" aria-label="Yoinker home">yoinker<span>.</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#example">Example</a>
+      <a href="#install">Install</a>
+      <a href="#method">How it works</a>
+      <a class="repo-link" href="https://github.com/lavallee/yoinker">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <p class="kicker">An evidence-first Agent Skill</p>
-      <h1>Understand how it works.<br><em>Yoink what transfers.</em></h1>
-      <p class="lede">Give your agent a link or a question. Get back what the evidence supports, what
-        fits your situation, and what—if anything—is worth borrowing.</p>
-      <div class="prompt" aria-label="Example prompt">
-        <span>You</span>
-        <p>Here’s a repository. Does it help this project? What should we borrow, try, track, or reject?</p>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <p class="kicker">An evidence-first Agent Skill</p>
+        <h1 id="hero-heading">Understand it.<br><em>Yoink what transfers.</em></h1>
+        <p class="lede">Give your agent a repository, paper, product, technique, or open question.
+          Get back what it actually does, what the evidence supports, and what—if anything—fits your
+          situation.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#install">Install Yoinker</a>
+          <a class="button button-secondary" href="https://github.com/lavallee/yoinker">View the source <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <aside class="first-prompt" aria-label="Example Yoinker prompt">
+        <div class="prompt-topline">
+          <span>Try this first</span>
+          <span>01 / assess</span>
+        </div>
+        <p>Use <code>$yoinker</code> on this repository. Explain what it does, whether it helps the
+          project in this directory, and what we should borrow, try, track, or reject.</p>
+        <a href="#example">See a worked answer <span aria-hidden="true">↓</span></a>
+      </aside>
+    </section>
+
+    <section class="proof-strip" aria-label="Release facts">
+      <span><strong>One skill</strong> · no service</span>
+      <span><strong>Codex + Claude Code</strong></span>
+      <span><strong>MIT licensed</strong></span>
+      <a href="https://github.com/lavallee/yoinker/releases/tag/v0.1.0"><strong>v0.1.0</strong> · release notes <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="example" id="example" aria-labelledby="example-heading">
+      <div class="section-intro">
+        <p class="section-label">A worked example</p>
+        <h2 id="example-heading">A useful mechanism without a wholesale yes.</h2>
+        <p>This compact example uses a real public artifact and a hypothetical local situation. It
+          demonstrates Yoinker’s decision shape; it is not a claim that this adoption happened or
+          improved an outcome.</p>
+      </div>
+
+      <div class="case-sheet">
+        <div class="case-input">
+          <div class="case-tag">Input</div>
+          <dl class="case-facts">
+            <div>
+              <dt>Artifact</dt>
+              <dd><a href="https://github.com/sverweij/dependency-cruiser/tree/1f28f44a49c054dc128226543188220818b1ab52">dependency-cruiser <span aria-hidden="true">↗</span></a></dd>
+            </div>
+            <div>
+              <dt>Situation</dt>
+              <dd>A TypeScript monorepo already using ESLint, with package boundaries drifting.</dd>
+            </div>
+          </dl>
+          <blockquote>Would this help us? We want the smallest useful addition, not another
+            architecture platform.</blockquote>
+        </div>
+
+        <div class="case-output">
+          <div class="case-tag">Yoinker’s answer</div>
+          <div class="bottom-line">
+            <p class="mini-label">Bottom line</p>
+            <p><strong>Yes—for executable dependency boundaries in CI.</strong> No—as a new source of
+              architectural truth. Start with one rule tied to a failure you already care about.</p>
+          </div>
+
+          <div class="decision-list" role="list" aria-label="Transfer decisions">
+            <div class="decision decision-borrow" role="listitem">
+              <span>Borrow</span>
+              <p>The rule contract: named <code>from</code>/<code>to</code> constraints, comments that
+                preserve intent, and error severity that can fail a build.</p>
+            </div>
+            <div class="decision decision-try" role="listitem">
+              <span>Try</span>
+              <p>Add one package-boundary rule against a known regression fixture. Compare signal and
+                maintenance cost with the current lint-only baseline.</p>
+            </div>
+            <div class="decision decision-track" role="listitem">
+              <span>Track</span>
+              <p>Resolution accuracy and runtime on the full monorepo. Expand only if the bounded rule
+                survives real aliases, generated code, and CI timing.</p>
+            </div>
+            <div class="decision decision-reject" role="listitem">
+              <span>Reject</span>
+              <p>Starting with diagrams or treating the dependency graph as the canonical architecture
+                model. Neither addresses the named regression first.</p>
+            </div>
+          </div>
+
+          <div class="evidence-line">
+            <span>Evidence checked · 2026-08-30</span>
+            <span>
+              <a href="https://github.com/sverweij/dependency-cruiser/blob/1f28f44a49c054dc128226543188220818b1ab52/README.md">mechanism</a>
+              <a href="https://github.com/sverweij/dependency-cruiser/blob/1f28f44a49c054dc128226543188220818b1ab52/doc/rules-reference.md">rule semantics</a>
+            </span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="split" aria-labelledby="two-ways">
-      <div class="section-label" id="two-ways">Two ways in</div>
-      <article>
-        <p class="number">01</p>
-        <h2>Assess this</h2>
-        <p>A repository, paper, product, practice, or claim. Yoinker checks the original artifact and
-          the local reality before recommending adoption.</p>
-      </article>
-      <article>
-        <p class="number">02</p>
-        <h2>Explain this</h2>
-        <p>A tool, technique, comparison, or open question. Yoinker separates what is observed, claimed,
-          inferred, and still unknown.</p>
-      </article>
-    </section>
-
-    <section class="verdicts" aria-labelledby="four-decisions">
-      <div class="section-label" id="four-decisions">One artifact, four possible decisions</div>
-      <div class="verdict-grid">
-        <article><h3>Borrow</h3><p>The mechanism fits and can be reproduced without importing the source wholesale.</p></article>
-        <article><h3>Try</h3><p>A bounded same-task test can resolve the important uncertainty.</p></article>
-        <article><h3>Track</h3><p>A named missing fact or future event would change the decision.</p></article>
-        <article><h3>Reject</h3><p>It conflicts, duplicates, lacks evidence, or costs more than it can return.</p></article>
+    <section class="install" id="install" aria-labelledby="install-heading">
+      <div class="install-intro">
+        <p class="section-label">Install</p>
+        <h2 id="install-heading">Two commands. Then ask normally.</h2>
+        <p>Install from the Lyra Forge marketplace and start a new session so your harness loads the
+          skill. There is no service, account, API key, or package dependency.</p>
       </div>
+
+      <div class="install-grid">
+        <article class="install-card">
+          <div class="install-card-header">
+            <div>
+              <p class="mini-label">Codex</p>
+              <h3>Install the plugin</h3>
+            </div>
+            <button class="copy-button" type="button" data-copy-target="codex-install">Copy</button>
+          </div>
+          <pre id="codex-install"><code>codex plugin marketplace add lyra-forge/marketplace
+codex plugin add yoinker@lyra-forge</code></pre>
+          <p class="invoke">Invoke it as <code>$yoinker:yoinker</code></p>
+        </article>
+
+        <article class="install-card">
+          <div class="install-card-header">
+            <div>
+              <p class="mini-label">Claude Code</p>
+              <h3>Install the plugin</h3>
+            </div>
+            <button class="copy-button" type="button" data-copy-target="claude-install">Copy</button>
+          </div>
+          <pre id="claude-install"><code>/plugin marketplace add lyra-forge/marketplace
+/plugin install yoinker@lyra-forge</code></pre>
+          <p class="invoke">Invoke it as <code>/yoinker:yoinker</code></p>
+        </article>
+      </div>
+
+      <p class="inspect-first">Prefer to inspect before installing?
+        <a href="https://github.com/lavallee/yoinker/blob/main/skills/yoinker/SKILL.md">Read the entire skill <span aria-hidden="true">↗</span></a>
+        or <a href="https://github.com/lavallee/yoinker">browse the repository <span aria-hidden="true">↗</span></a>.
+      </p>
     </section>
 
-    <section class="principles" aria-labelledby="keeps-straight">
-      <div class="section-label" id="keeps-straight">What it keeps straight</div>
-      <ul>
-        <li><strong>A mention is a lead.</strong> The original artifact is evidence.</li>
-        <li><strong>Authority belongs to a claim.</strong> Not to a universal source score.</li>
-        <li><strong>A useful part is not a wholesale yes.</strong> Fit is decided per mechanism.</li>
-        <li><strong>A recommendation is not permission.</strong> Implementation remains a human decision.</li>
-      </ul>
+    <section class="method" id="method" aria-labelledby="method-heading">
+      <div class="section-intro method-intro">
+        <p class="section-label">How it works</p>
+        <h2 id="method-heading">One method, two ways in.</h2>
+      </div>
+
+      <div class="mode-grid">
+        <article>
+          <p class="number">01</p>
+          <h3>Assess this</h3>
+          <p>“Here is a repository, paper, product, or practice. Does it help this situation, and how
+            should we think about adoption?”</p>
+        </article>
+        <article>
+          <p class="number">02</p>
+          <h3>Explain this</h3>
+          <p>“What does this actually do? How do these approaches differ? What does the evidence
+            support, and what remains uncertain?”</p>
+        </article>
+      </div>
+
+      <ol class="method-steps">
+        <li>
+          <span>01</span>
+          <div><h3>Ground</h3><p>Follow discovery links to original artifacts. Inspect the named local
+            context before claiming fit.</p></div>
+        </li>
+        <li>
+          <span>02</span>
+          <div><h3>Separate</h3><p>Keep observation, source claims, inference, unknowns, recommendations,
+            and outcomes from blurring together.</p></div>
+        </li>
+        <li>
+          <span>03</span>
+          <div><h3>Decide</h3><p>Judge each mechanism as borrow, try, track, or reject. Name the evidence
+            and what would reverse the call.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="prompt-library" aria-labelledby="prompts-heading">
+      <div>
+        <p class="section-label">Good first prompts</p>
+        <h2 id="prompts-heading">Bring the question you already have.</h2>
+      </div>
+      <div class="prompt-list">
+        <button type="button" class="prompt-copy" data-copy-text="Use $yoinker on this repository. Explain what it does, whether it helps the project in this directory, and what—if anything—we should borrow, try, track, or reject.">
+          <span>Assess a repository</span>
+          <q>Does this help the project in this directory?</q>
+          <em>Copy prompt</em>
+        </button>
+        <button type="button" class="prompt-copy" data-copy-text="Use $yoinker to explain what GraphRAG changes compared with ordinary full-text retrieval. Separate what is directly supported from what depends on my data and workload.">
+          <span>Explain a technique</span>
+          <q>What does GraphRAG change compared with full-text retrieval?</q>
+          <em>Copy prompt</em>
+        </button>
+      </div>
     </section>
 
     <section class="status" aria-labelledby="status-heading">
       <div>
-        <p class="section-label" id="status-heading">Status</p>
-        <h2>Small on purpose.</h2>
+        <p class="section-label">Release status</p>
+        <h2 id="status-heading">Useful now. Honest about what is not proven.</h2>
       </div>
-      <p>Version 0.1.0 is the initial MIT-licensed release: one skill, two mode references, one optional
-        brief, and a behavioral evaluation protocol. Structural checks pass. The held-out comparison is
-        still planned, so public availability is not presented as evidence of improved outcomes.</p>
+      <div class="status-copy">
+        <p>Version 0.1.0 is the initial MIT-licensed release. Repository checks, both plugin manifests,
+          marketplace installation, and the public deployment are verified.</p>
+        <p>The held-out behavior comparison is still planned. Availability and a polished example are
+          not presented as evidence that the skill improves outcomes.</p>
+        <a href="https://github.com/lavallee/yoinker/blob/main/evaluation/protocol.md">Read the evaluation contract <span aria-hidden="true">↗</span></a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <span>yoinker</span>
-    <span>MIT · 2026</span>
+    <a class="wordmark" href="#top">yoinker<span>.</span></a>
+    <div class="footer-links">
+      <a href="https://github.com/lavallee/yoinker">GitHub</a>
+      <a href="https://github.com/lavallee/yoinker/releases/tag/v0.1.0">v0.1.0</a>
+      <a href="https://github.com/lavallee/yoinker/blob/main/LICENSE">MIT</a>
+    </div>
+    <span>Understand it. Yoink what transfers.</span>
   </footer>
+
+  <script src="site.js"></script>
 </body>
 </html>

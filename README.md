@@ -19,6 +19,8 @@ It is built for two ordinary requests:
 The answer is not a universal score. It is an inspectable explanation and, when local context exists,
 a mechanism-by-mechanism decision: **borrow, try, track, or reject**.
 
+**[See a worked example and install Yoinker →](https://lavallee.github.io/yoinker/)**
+
 ## Install
 
 Install Yoinker from the `lyra-forge` marketplace, then start a new session so the harness loads the

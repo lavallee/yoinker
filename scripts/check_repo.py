@@ -23,6 +23,8 @@ REQUIRED = (
     ".claude-plugin/plugin.json",
     "docs/index.html",
     "docs/style.css",
+    "docs/site.js",
+    "docs/favicon.svg",
     "docs/.nojekyll",
     "evaluation/protocol.md",
     "skills/yoinker/SKILL.md",
@@ -101,6 +103,20 @@ def check_plugins(errors: list[str]) -> None:
         errors.append("Claude and Codex plugin versions must match")
 
 
+def check_site(errors: list[str]) -> None:
+    text = (ROOT / "docs/index.html").read_text(encoding="utf-8")
+    required_fragments = {
+        "worked example": 'id="example"',
+        "Codex install command": "codex plugin add yoinker@lyra-forge",
+        "Claude Code install command": "/plugin install yoinker@lyra-forge",
+        "public repository link": "https://github.com/lavallee/yoinker",
+        "copy interaction": 'src="site.js"',
+    }
+    for label, fragment in required_fragments.items():
+        if fragment not in text:
+            errors.append(f"landing page is missing {label}")
+
+
 def check_links(errors: list[str]) -> None:
     for path in markdown_files():
         text = path.read_text(encoding="utf-8")
@@ -131,6 +147,7 @@ def main() -> int:
         check_skill(errors)
     check_version(errors)
     check_plugins(errors)
+    check_site(errors)
     check_links(errors)
     check_public_hygiene(errors)
     if errors:
