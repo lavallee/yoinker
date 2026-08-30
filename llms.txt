@@ -1,0 +1,25 @@
+# yoinker
+
+> An Agent Skill for explaining unfamiliar tools and ideas, testing whether their mechanisms transfer
+> to a specific situation, and deciding what to borrow, try, track, or reject.
+
+## Start here
+
+- [README.md](README.md): Product story, installation path, example prompts, boundaries, and status.
+- [skills/yoinker/SKILL.md](skills/yoinker/SKILL.md): Canonical skill instructions and mode router.
+- [skills/yoinker/references/assess-an-artifact.md](skills/yoinker/references/assess-an-artifact.md):
+  Evidence-to-local-transfer procedure for a specific candidate.
+- [skills/yoinker/references/answer-an-open-question.md](skills/yoinker/references/answer-an-open-question.md):
+  Source-grounded explanation and comparison procedure.
+- [skills/yoinker/templates/decision-brief.md](skills/yoinker/templates/decision-brief.md): Optional
+  inspectable decision artifact.
+- [evaluation/protocol.md](evaluation/protocol.md): Proposed paired behavioral evaluation and promotion
+  gate.
+- [.codex-plugin/plugin.json](.codex-plugin/plugin.json): Codex plugin metadata.
+- [.claude-plugin/plugin.json](.claude-plugin/plugin.json): Claude Code plugin metadata.
+
+## Project documents
+
+- [CONTRIBUTING.md](CONTRIBUTING.md): Contribution and evidence expectations.
+- [RELEASING.md](RELEASING.md): Versioning, behavioral gate, distribution review, and release checklist.
+- [CHANGELOG.md](CHANGELOG.md): Version history.

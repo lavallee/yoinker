@@ -1,0 +1,7 @@
+interface:
+  display_name: "Yoinker"
+  short_description: "Understand it. Yoink what transfers."
+  default_prompt: "Use $yoinker to explain how this works, whether it helps my project, and what—if anything—we should borrow."
+
+policy:
+  allow_implicit_invocation: true
