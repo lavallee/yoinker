@@ -113,7 +113,8 @@ intact. It does not mean copying code or content without rights.
 
 ## Status
 
-Version **0.2.0** adds an adoption mode and output comparison to the 0.1.0 skill, under the MIT license.
+Version **0.3.0** adds decision records, earlier-record lookup, and an outcome log to the 0.2.0 skill,
+under the MIT license.
 The skill and dual-harness plugin package pass structural and repository checks. The proposed held-out behavioral comparison has not yet been run;
 availability is not evidence of improved outcomes. See [`RELEASING.md`](RELEASING.md) for the release
 and evaluation contract.

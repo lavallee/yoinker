@@ -4,6 +4,8 @@ All notable changes to Yoinker will be documented here. Versions follow semantic
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-23
+
 ### Added
 
 - Decision records. An assessment worth finding again is kept with the project it concerns
@@ -15,6 +17,14 @@ All notable changes to Yoinker will be documented here. Versions follow semantic
   or a reversal stays attached to the decision.
 - Guidance for finding candidate projects when none is named, and for requesting authorization before a
   trial runs an artifact.
+
+### Evidence
+
+- These changes come from retiring a private service that had been the only place assessments were
+  kept: agents kept returning to it because the skill said nothing about where a decision lives. Its
+  63 assessments were moved into the projects they concern using this layout. The helper has unit
+  tests. The paired held-out comparison in `evaluation/protocol.md` has not been run for this release,
+  as it had not been for 0.1.0 or 0.2.0.
 
 ## [0.2.0] - 2026-11-23
 
