@@ -31,6 +31,7 @@ REQUIRED = (
     "skills/yoinker/agents/openai.yaml",
     "skills/yoinker/references/assess-an-artifact.md",
     "skills/yoinker/references/answer-an-open-question.md",
+    "skills/yoinker/references/adopt-what-was-decided.md",
     "skills/yoinker/templates/decision-brief.md",
 )
 MARKDOWN_LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")

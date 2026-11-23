@@ -68,7 +68,8 @@ will explain the general mechanism and name the facts that would change the deci
 ## What Yoinker does not do
 
 Yoinker does not install or execute the thing it assesses. It does not certify security, create work,
-merge code, publish, or turn a recommendation into permission. Popularity, a polished demo, or a long
+merge code, publish, or turn a recommendation into permission. When you authorize implementation, it
+assesses first and adopts only what the assessment supports, with credit for what it took. Popularity, a polished demo, or a long
 list of citations does not count as proof of fit or outcomes.
 
 “Yoink” means carrying over a permitted mechanism with its evidence, attribution, and license duties
@@ -81,6 +82,8 @@ intact. It does not mean copying code or content without rights.
   artifact mode.
 - [`references/answer-an-open-question.md`](skills/yoinker/references/answer-an-open-question.md) — the
   explanation and comparison mode.
+- [`references/adopt-what-was-decided.md`](skills/yoinker/references/adopt-what-was-decided.md) — carrying
+  out an assessment's decisions once implementation is authorized.
 - [`templates/decision-brief.md`](skills/yoinker/templates/decision-brief.md) — an optional durable
   handoff.
 - [`evaluation/protocol.md`](evaluation/protocol.md) — the held-out promotion test.
@@ -88,7 +91,7 @@ intact. It does not mean copying code or content without rights.
 
 ## Status
 
-Version **0.1.0** is the initial MIT-licensed release. The skill and dual-harness plugin package pass
-structural and repository checks. The proposed held-out behavioral comparison has not yet been run;
+Version **0.2.0** adds an adoption mode and output comparison to the 0.1.0 skill, under the MIT license.
+The skill and dual-harness plugin package pass structural and repository checks. The proposed held-out behavioral comparison has not yet been run;
 availability is not evidence of improved outcomes. See [`RELEASING.md`](RELEASING.md) for the release
 and evaluation contract.

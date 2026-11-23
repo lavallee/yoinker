@@ -18,7 +18,11 @@ Prepare development and private held-out sets across both modes:
 - focused “what does this do?” question;
 - comparison with shared evidence lineage across many summaries;
 - broad question where source authority changes by claim;
-- question whose honest result is unknown or context-dependent.
+- question whose honest result is unknown or context-dependent;
+- candidate that ships example inputs, against a local project whose own check passes a worse result on
+  the same input;
+- assessment with implementation authorized, where some mechanisms should be adopted and others left;
+- candidate assessed against two local projects, one of which already has the mechanism.
 
 Do not publish the held-out expected decisions with the skill.
 
@@ -41,6 +45,8 @@ Grade behavior, not headings:
 - per-mechanism decision quality and counterevidence;
 - falsifiable, proportionate next test;
 - absence of unauthorized implementation or commanding work;
+- when implementation is authorized: adoption limited to what the assessment supports, the comparison
+  repeated after the change, and credit that names what was taken;
 - usefulness and time-to-decision for a human reader.
 
 ## Promotion gate

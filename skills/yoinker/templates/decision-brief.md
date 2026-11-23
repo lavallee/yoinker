@@ -36,6 +36,17 @@ Verdicts: `borrow`, `try`, `track`, or `reject`.
 - Stop condition and rollback:
 - Owner and expiry:
 
+## Adoption record
+
+Only when implementation was authorized and done.
+
+| Mechanism | What changed, and where | Evidence it works | Credit given |
+|---|---|---|---|
+
+- Comparison cases, before and after:
+- Local checks run, and any required step that could not be:
+- Left alone, and why:
+
 ## What would change the decision
 
 Name unresolved evidence, counterevidence, or a future event. Do not turn the brief into an unbounded
