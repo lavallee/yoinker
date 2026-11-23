@@ -44,3 +44,6 @@ supports the claim, not merely a page the process visited.
 If the user supplied local context, finish with implications for that context and use the artifact-mode
 verdicts where appropriate. Without local context, explain what facts or constraints would determine
 adoption rather than inventing a recommendation.
+
+A broad answer that will inform later decisions can be kept the same way as an artifact assessment; see
+[keep-a-record.md](keep-a-record.md).

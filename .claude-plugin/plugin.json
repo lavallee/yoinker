@@ -1,7 +1,7 @@
 {
   "name": "yoinker",
   "displayName": "Yoinker — understand it, yoink what transfers",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Explains unfamiliar tools and ideas, checks their mechanisms against a real situation, and identifies what to borrow, try, track, or reject.",
   "author": {
     "name": "Marc Lavallee"

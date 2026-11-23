@@ -13,6 +13,10 @@
   Source-grounded explanation and comparison procedure.
 - [skills/yoinker/references/adopt-what-was-decided.md](skills/yoinker/references/adopt-what-was-decided.md):
   Carrying out an assessment's decisions once implementation is authorized: scope, proof, credit, release.
+- [skills/yoinker/references/keep-a-record.md](skills/yoinker/references/keep-a-record.md): Where a
+  decision record goes, how to find an earlier one, and how outcomes are logged.
+- [skills/yoinker/scripts/record.py](skills/yoinker/scripts/record.py): Dependency-free helper that
+  locates, finds, and opens records.
 - [skills/yoinker/templates/decision-brief.md](skills/yoinker/templates/decision-brief.md): Optional
   inspectable decision artifact.
 - [evaluation/protocol.md](evaluation/protocol.md): Proposed paired behavioral evaluation and promotion

@@ -50,3 +50,10 @@ Lead with the answer in ordinary language. Include enough evidence and uncertain
 inspect the reasoning, then state the smallest next test only when a real decision remains. Use
 [templates/decision-brief.md](templates/decision-brief.md) when the user needs a durable artifact;
 otherwise answer directly without forcing every heading.
+
+## Keep what was decided
+
+Before assessing an artifact, check whether it was assessed before. When the work ends in a decision
+worth finding again, keep a record with the project it concerns, or in the per-user store when no
+project fits, and log later outcomes there. Read
+[references/keep-a-record.md](references/keep-a-record.md) for where records go and how to open one.

@@ -9,6 +9,8 @@ What the evidence supports now, in ordinary language.
 ## Question and context
 
 - Candidate or question:
+- Original artifact, revision or version, license or terms:
+- Discovery path:
 - Decision context and owner:
 - Current baseline:
 - Evidence snapshot date:
@@ -51,3 +53,10 @@ Only when implementation was authorized and done.
 
 Name unresolved evidence, counterevidence, or a future event. Do not turn the brief into an unbounded
 backlog.
+
+## Outcome log
+
+Append one dated line when something happens to a decision above: a borrow that landed and where, a
+test result against its threshold, an expiry, a reversal. Keep earlier lines, including failures.
+
+- YYYY-MM-DD —

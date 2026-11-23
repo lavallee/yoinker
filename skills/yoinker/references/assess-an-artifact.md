@@ -17,6 +17,14 @@ When the user names more than one local project, or adds one partway through, ju
 each owner. A mechanism rejected for one project may fit another. Say so plainly when a project already
 has the mechanism: that is a finding, and it saves the owner a second look.
 
+Check for an earlier record of the same artifact before gathering evidence; see
+[keep-a-record.md](keep-a-record.md). An earlier decision and its logged outcome are local evidence.
+
+When the user asks which projects could benefit without naming them, take the list from what the
+environment already provides, such as a workspace listing or project registry, and inspect each
+candidate project before naming it. A general development should not produce a recommendation for
+every project it could conceivably touch.
+
 ## Build an evidence-backed mechanism inventory
 
 Separate:
@@ -72,3 +80,7 @@ Lead with what should happen now and why. For each material mechanism, connect t
 When a trial is justified, specify the smallest experiment that could falsify the proposed benefit. Keep
 promotion separate: a successful experiment still does not authorize merge, install, binding, publish,
 deploy, or production change.
+
+If a trial needs the artifact to run, that is a separate authorization. Ask for it with the pinned
+revision, what the install and build steps do, the permissions and network access it wants, and a
+disposable environment without credentials to run it in.
