@@ -32,6 +32,8 @@ REQUIRED = (
     "skills/yoinker/references/assess-an-artifact.md",
     "skills/yoinker/references/answer-an-open-question.md",
     "skills/yoinker/references/adopt-what-was-decided.md",
+    "skills/yoinker/references/keep-a-record.md",
+    "skills/yoinker/scripts/record.py",
     "skills/yoinker/templates/decision-brief.md",
 )
 MARKDOWN_LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
@@ -132,6 +134,8 @@ def check_links(errors: list[str]) -> None:
 
 def check_public_hygiene(errors: list[str]) -> None:
     for path in sorted(p for p in ROOT.rglob("*") if p.is_file() and ".git" not in p.parts):
+        if "__pycache__" in path.parts:
+            continue
         if path.resolve() == Path(__file__).resolve():
             continue
         if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".gif", ".ico"}:

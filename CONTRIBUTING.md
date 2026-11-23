@@ -9,6 +9,7 @@ The repository has no runtime dependencies. Run the release checks with Python 3
 
 ```bash
 python scripts/check_repo.py
+python scripts/test_record.py
 ```
 
 If the Codex skill-authoring tools are installed locally, also run their structural validator:
@@ -32,7 +33,7 @@ development case. A structural check is not evidence that the skill improves an 
 
 ## Before a pull request
 
-Run `python scripts/check_repo.py`, inspect the complete diff, and explain:
+Run `python scripts/check_repo.py` and `python scripts/test_record.py`, inspect the complete diff, and explain:
 
 1. which realistic request the change improves;
 2. what evidence supports the change;

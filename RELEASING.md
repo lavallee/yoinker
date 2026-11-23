@@ -21,6 +21,7 @@ both plugin manifests, `README.md`, `CHANGELOG.md`, and the landing page.
 
    ```bash
    python scripts/check_repo.py
+   python scripts/test_record.py
    python /path/to/skill-creator/scripts/quick_validate.py skills/yoinker
    python /path/to/plugin-creator/scripts/validate_plugin.py .
    claude plugin validate . --strict

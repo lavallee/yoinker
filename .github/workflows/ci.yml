@@ -15,3 +15,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate the public repository and skill package
         run: python3 scripts/check_repo.py
+      - name: Test the record helper
+        run: python3 scripts/test_record.py

@@ -65,11 +65,30 @@ will explain the general mechanism and name the facts that would change the deci
 - Useful mechanisms can be separated from a source that should otherwise be rejected.
 - Uncertainty becomes a bounded test with a baseline and stop condition—not an indefinite “explore.”
 
+## Where the decisions go
+
+A decision you will want again is kept as one Markdown record per artifact or question:
+
+- **with the project it concerns**, in `docs/yoinker/` unless the project already names a place for
+  research and decisions, so the reasoning accrues in the repository it changed;
+- **outside a public repository** by default: in its private companion if it has one, because a record
+  names local constraints and reasoning you may not mean to publish;
+- **in a per-user store** when no project fits: `$YOINKER_HOME` if set, otherwise
+  `$XDG_DATA_HOME/yoinker` (`~/.local/share/yoinker` by default).
+
+Each record carries the pinned source, the per-mechanism decisions, and a dated outcome log. Yoinker
+checks for an earlier record before assessing the same thing again, including records opened from other
+projects on the same machine. A bundled, dependency-free helper does the bookkeeping; it never clones,
+installs, or executes what is being assessed. See
+[`references/keep-a-record.md`](skills/yoinker/references/keep-a-record.md).
+
 ## What Yoinker does not do
 
 Yoinker does not install or execute the thing it assesses. It does not certify security, create work,
-merge code, publish, or turn a recommendation into permission. When you authorize implementation, it
-assesses first and adopts only what the assessment supports, with credit for what it took. Popularity, a polished demo, or a long
+merge code, commit, publish, or turn a recommendation into permission. When you authorize
+implementation, it assesses first and adopts only what the assessment supports, with credit for what
+it took. Otherwise the only file it writes is the decision record, and only when the decision is worth
+keeping. Popularity, a polished demo, or a long
 list of citations does not count as proof of fit or outcomes.
 
 “Yoink” means carrying over a permitted mechanism with its evidence, attribution, and license duties
@@ -84,6 +103,9 @@ intact. It does not mean copying code or content without rights.
   explanation and comparison mode.
 - [`references/adopt-what-was-decided.md`](skills/yoinker/references/adopt-what-was-decided.md) — carrying
   out an assessment's decisions once implementation is authorized.
+- [`references/keep-a-record.md`](skills/yoinker/references/keep-a-record.md) — where records go, how
+  earlier ones are found, and how outcomes are logged.
+- [`scripts/record.py`](skills/yoinker/scripts/record.py) — the record helper.
 - [`templates/decision-brief.md`](skills/yoinker/templates/decision-brief.md) — an optional durable
   handoff.
 - [`evaluation/protocol.md`](evaluation/protocol.md) — the held-out promotion test.
