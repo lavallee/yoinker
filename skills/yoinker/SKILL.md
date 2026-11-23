@@ -1,13 +1,14 @@
 ---
 name: yoinker
-description: Turn a specific external artifact or an open technical or product question into a source-grounded explanation and, when local context is available, a bounded adoption decision. Use when asked whether something would help a project, how to think about adopting it, what a tool or technique does, or how approaches compare. Do not use for simple factual lookups or requests that already authorize implementation.
+description: Turn a specific external artifact or an open technical or product question into a source-grounded explanation and, when local context is available, a bounded adoption decision. Use when asked whether something would help a project, how to think about adopting it, what a tool or technique does, or how approaches compare, and when asked to adopt what an assessment supports. Do not use for simple factual lookups or for implementation with no external candidate or question to assess.
 ---
 
 # Yoinker
 
 Turn external information into an inspectable answer or adoption decision. Preserve the user's scope
 and decision authority; a recommendation does not authorize implementation, installation, publication,
-or other consequential change.
+or other consequential change. When the user has authorized implementation, assess first and adopt only
+what the assessment supports.
 
 ## Choose the mode
 
@@ -17,6 +18,8 @@ or other consequential change.
   [references/answer-an-open-question.md](references/answer-an-open-question.md).
 - If both apply, answer the open question only far enough to support the artifact decision; do not
   produce two disconnected reports.
+- When the user has authorized implementation, finish the assessment, then read
+  [references/adopt-what-was-decided.md](references/adopt-what-was-decided.md).
 
 ## Shared standards
 
@@ -34,6 +37,8 @@ or other consequential change.
   content, data, or other protected material.
 - Inspect the user's named project, brief, or constraints before making local-fit claims. If local
   context is missing, explain the general mechanism and say what context would change the decision.
+- Reading or running a candidate's example inputs through the user's own system is not executing the
+  candidate. Keep its files apart from the project and from any script that reads them.
 - Do not use popularity, polished examples, a registry listing, a declared dependency, or a universal
   score as proof of safety, fit, deployment, adoption, or outcomes.
 - Prefer per-mechanism judgments over one verdict for an entire source. Name counterevidence and what

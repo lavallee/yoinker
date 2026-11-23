@@ -11,6 +11,8 @@
   Evidence-to-local-transfer procedure for a specific candidate.
 - [skills/yoinker/references/answer-an-open-question.md](skills/yoinker/references/answer-an-open-question.md):
   Source-grounded explanation and comparison procedure.
+- [skills/yoinker/references/adopt-what-was-decided.md](skills/yoinker/references/adopt-what-was-decided.md):
+  Carrying out an assessment's decisions once implementation is authorized: scope, proof, credit, release.
 - [skills/yoinker/templates/decision-brief.md](skills/yoinker/templates/decision-brief.md): Optional
   inspectable decision artifact.
 - [evaluation/protocol.md](evaluation/protocol.md): Proposed paired behavioral evaluation and promotion
